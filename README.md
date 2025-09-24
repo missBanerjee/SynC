@@ -1,4 +1,4 @@
-Official code of SynC : Language-assisted Feature Representation and Lightweight Active Learning For On-the-Fly Category Discovery
+Official code of SynC: Language-assisted Feature Representation and Lightweight Active Learning For On-the-Fly Category Discovery
 # SynC and SynC-AL
 Code for SynC and its extended version SynC-AL
 
@@ -14,7 +14,7 @@ tqdm
 
 ## Data & Pre-trained Weights
 We use fine-grained benchmarks in this paper, including:
-The Semantic Shift Benchmark (SSB)[CUB and Stanford Cars]
+The Semantic Shift Benchmark (SSB)[CUB and Stanford Cars], Oxford Pets, Food 101. 
 We also use generic object recognition datasets, including:
 CIFAR-10/100 and ImageNet
 
@@ -31,23 +31,23 @@ Set paths to datasets and desired log directories in config.py
 - `nearest_cls_align_imagenet.py` for classifier alignment (SynC-AL) for ImageNet-100
 
 ## Scripts
-In the scripts file,select the python file according to the dataset you desire to train the model.Ensure that correct text embedding file is given as input.Set the dataset name and run. 
+In the scripts file, select the Python file according to the dataset you desire to train the model. Ensure that the correct text embedding file is given as input. Set the dataset name and run. 
 bash variable_threshold.sh
-For SynC, in the python file, ensure you are running the "test_on_the_fly_CA" during inference. Again in the scripts file,select the python file according to the dataset you desire to train the model.Set the dataset name and run. 
+For SynC, in the Python file, ensure you are running the "test_on_the_fly_CA" function during inference. Again in the scripts file,select the Python file according to the dataset you desire to train the model. Set the dataset name and run. 
 bash classifier_alignment.sh
-For SynC-AL, in the python file, ensure you are running the "test_on_the_fly_active3" during inference. Again in the scripts file,select the python file according to the dataset you desire to train the model.Set the dataset name and run. 
+For SynC-AL, in the Python file, ensure you are running the "test_on_the_fly_active3" function during inference. Again in the scripts file, select the Python file according to the dataset you desire to train the model. Set the dataset name and run. 
 bash classifier_alignment.sh
-Then check the results starting with 'Train Accuracies after classifier alignment:'
+Then check the results starting with 'Train Accuracies after classifier alignment.
 
-# On-the-fly-Category-Discovery
-Code release for "On-the-fly Category Discovery" (CVPR 2023）
+# Language-assisted Feature Representation and Lightweight Active Learning For On-the-Fly Category Discovery
+Code release for "Language-assisted Feature Representation and Lightweight
+Active Learning For On-the-Fly Category Discovery" (September 2025)
 
 
 **Abstract**: Contemporary deep learning models are very successful in recognizing predetermined categories, but often struggle when confronted with novel ones, constraining their utility in
 the real world. Identifying this research gap, On-the-fly Category Discovery aims to enable machine learning systems trained on closed labeled datasets to promptly discern between
 novel and familiar categories of the test-images encountered in an online manner (one image at a time), along with clustering the different new classes as and when they are encountered.
-To address this challenging task, we propose SynC, a pragmatic yet robust framework that capitalizes on the presence of category names within the labeled datasets and the power-
-ful knowledge-base of Large Language Models to obtain unique feature representations for each class. It also dynamically updates the classifiers of both the seen and novel classes for
+To address this challenging task, we propose SynC, a pragmatic yet robust framework that capitalizes on the presence of category names within the labeled datasets and the powerful knowledge base of Large Language Models to obtain unique feature representations for each class. It also dynamically updates the classifiers of both the seen and novel classes for
 improved class discriminability. An extended variant, SynC-AL incorporates a lightweight active learning module to mitigate errors during inference, for long-term model deployment.
 Extensive evaluation show that SynC and SynC-AL achieve state-of-the-art performance across a spectrum of classification datasets.
 
